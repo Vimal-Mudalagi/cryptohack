@@ -1,0 +1,39 @@
+text = "label"
+
+result = ''.join(chr(ord(c) ^ 13) for c in text)
+
+print(result)
+
+
+'''
+What’s happening in code
+ord(c)
+
+👉 char → number
+
+^ 13
+
+👉 XOR operation
+
+chr(...)
+
+👉 number → char
+
+..........
+XOR = bit flipping controlled by another number
+
+Why XOR is powerful??
+
+Because of this property:
+
+A ^ B ^ B = A
+
+👉 XOR twice with same value → original back
+
+Example:
+
+c ^ 13 ^ 13 = c
+
+👉 This is why XOR is used in encryption
+
+'''
